@@ -13,9 +13,11 @@ Tab:AddDropdown({
 	Options = {"Orion", "Rayfield"},
 	Callback = function(Value)
 		if Value == "Orion" then
-        print("under development")
-    elseif Value == "Rayfield" then
-        print("same")
-    end
+                    print("under development")
+                elseif Value == "Rayfield" then
+                    print("same")
+                end
 	end    
 })
+
+OrionLib:Init()
